@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Engine 3D Profissional Decoupled</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="ui-panel">
+        <h3>Engine 3D Proprietaria</h3>
+        <div class="control-group">
+            <label for="cameraMode">Modo da Camera:</label>
+            <select id="cameraMode">
+                <option value="free">Camera Livre (Manual)</option>
+                <option value="fixed">Camera Fixa (Travada)</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="fovInput">FOV / Zoom da Cena:</label>
+            <input type="range" id="fovInput" min="150" max="800" value="400">
+        </div>
+        <div class="instructions">
+            <strong>Controlos:</strong><br>
+             Rato/Touch: Orbitar<br>
+             <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>: Transladar<br>
+             Slider: Modificar FOV
+        </div>
+    </div>
+
+    <canvas id="renderCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
