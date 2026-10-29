@@ -10,6 +10,7 @@
 
     <div id="ui-panel">
         <h3>Engine 3D Proprietaria</h3>
+        
         <div class="control-group">
             <label for="cameraMode">Modo da Camera:</label>
             <select id="cameraMode">
@@ -17,15 +18,46 @@
                 <option value="fixed">Camera Fixa (Travada)</option>
             </select>
         </div>
+
+        <div class="control-group">
+            <label for="cullingMode">Modo de Culling:</label>
+            <select id="cullingMode">
+                <option value="normal3d">Culling 3D (Normal Real)</option>
+                <option value="winding2d">Culling 2D (Winding Order)</option>
+                <option value="none">Sem Culling (Desenhar Tudo)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="modelSelector">Injetar Novo Modelo:</label>
+            <select id="modelSelector">
+                <option value="" disabled selected>Escolha um ficheiro...</option>
+                <option value="./sphere.json">Esfera (sphere.json)</option>
+                <option value="./square.json">Cubo (cube.json)</option>
+                <option value="./torus.json">Toro (torus.json)</option>
+            </select>
+        </div>
+
         <div class="control-group">
             <label for="fovInput">FOV / Zoom da Cena:</label>
             <input type="range" id="fovInput" min="150" max="800" value="400">
         </div>
+
+        <div id="selection-box" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #2a2b36;">
+            <label>Objeto Selecionado:</label>
+            <div id="selected-name" style="font-size: 12px; color: #00ffcc; margin-bottom: 8px;">Nenhum (Clique num objeto)</div>
+            <button id="deleteBtn" style="width:100%; background:#d93838; border:none; color:white; padding:6px; border-radius:5px; font-size:11px; cursor:pointer; font-weight:bold; display:none;">Remover Objeto</button>
+        </div>
+
         <div class="instructions">
-            <strong>Controlos:</strong><br>
-             Rato/Touch: Orbitar<br>
-             <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>: Transladar<br>
-             Slider: Modificar FOV
+            <strong>Controlos Globais:</strong><br>
+             Rato/Touch: Orbitar Câmara<br>
+             <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>: Transladar Câmara<br><br>
+            <strong>Controlo do Objeto Selecionado:</strong><br>
+             Rato: Clique para Selecionar<br>
+             <span class="key">I</span><span class="key">K</span>: Mover para Cima/Baixo<br>
+             <span class="key">J</span><span class="key">L</span>: Mover para Esquerda/Direita<br>
+             <span class="key">DEL</span>: Eliminar Objeto
         </div>
     </div>
 
