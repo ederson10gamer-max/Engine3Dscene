@@ -29,7 +29,7 @@ async function loadTargetModel(url) {
 }
 
 // Inicializa a Engine carregando o Objeto Modular Externo
-loadTargetModel('./square.json');
+loadTargetModel('./venus.json');
 
 // --- Controlos de Interface ---
 document.getElementById('cameraMode').addEventListener('change', (e) => {
